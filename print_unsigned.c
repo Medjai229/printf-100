@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_unsigned - prints unsigned integer numbers
+ * printuns - prints unsigned integer numbers
  * @ap: argument pointer
  * @params: the parameters struct
  *
  * Return: bytes printed
  */
-int print_unsigned(va_list ap, params_t *params)
+int printuns(va_list ap, params_t *params)
 {
 	unsigned long l;
 
@@ -18,5 +18,5 @@ int print_unsigned(va_list ap, params_t *params)
 	else
 		l = (unsigned int)va_arg(ap, unsigned int);
 	params->unsign = 1;
-	return (print_number(convert(l, 10, CONVERT_UNSIGNED, params), params));
+	return (printnum(conv(l, 10, CONV_UNSIGNED, params), params));
 }

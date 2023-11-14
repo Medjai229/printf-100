@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_hex - prints unsigned hex numbers in lowercase
+ * printhex - prints unsigned hex numbers in lowercase
  * @ap: the argument pointer
  * @params: the parameters struct
  *
  * Return: bytes printed
  */
-int print_hex(va_list ap, params_t *params)
+int printhex(va_list ap, params_t *params)
 {
 	unsigned long l;
 	int c = 0;
@@ -20,12 +20,12 @@ int print_hex(va_list ap, params_t *params)
 	else
 		l = (unsigned int)va_arg(ap, unsigned int);
 
-	str = convert(l, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
+	str = conv(l, 16, CONV_UNSIGNED | CONV_LOWCASE, params);
 	if (params->hashtag_flag && l)
 	{
 		*--str = 'x';
 		*--str = '0';
 	}
 	params->unsign = 1;
-	return (c += print_number(str, params));
+	return (c += printnum(str, params));
 }

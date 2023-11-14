@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * get_flag - finds the flag func
+ * getf - finds the flag func
  * @s: the format string
  * @params: the parameters struct
  *
  * Return: if flag was valid
  */
-int get_flag(char *s, params_t *params)
+int getf(char *s, params_t *params)
 {
 	int i = 0;
 

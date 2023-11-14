@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_string - prints string
+ * prints - prints string
  * @ap: argument pointer
  * @params: the parameters struct
  *
  * Return: number chars printed
  */
-int print_string(va_list ap, params_t *params)
+int prints(va_list ap, params_t *params)
 {
 	char *str = va_arg(ap, char *), pad_char = ' ';
 	unsigned int pad = 0, sum = 0, i = 0, j;
@@ -15,7 +15,7 @@ int print_string(va_list ap, params_t *params)
 	(void)params;
 	switch ((int)(!str))
 		case 1:
-			str = NULL_STRING;
+			str = NULL_STR;
 
 	j = pad = _strlen(str);
 	if (params->precision < pad)

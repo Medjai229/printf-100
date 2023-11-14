@@ -1,28 +1,28 @@
 #include "main.h"
 
 /**
- * get_specifier - finds the format func
+ * getspec - finds the format func
  * @s: the format string
  *
  * Return: the number of bytes printed
  */
-int (*get_specifier(char *s))(va_list ap, params_t *params)
+int (*getspec(char *s))(va_list ap, params_t *params)
 {
 	specifier_t specifiers[] = {
-		{"c", print_char},
-		{"d", print_int},
-		{"i", print_int},
-		{"s", print_string},
-		{"%", print_percent},
-		{"b", print_binary},
-		{"o", print_octal},
-		{"u", print_unsigned},
-		{"x", print_hex},
-		{"X", print_HEX},
-		{"p", print_address},
-		{"S", print_S},
-		{"r", print_rev},
-		{"R", print_rot13},
+		{"c", printc},
+		{"d", printi},
+		{"i", printi},
+		{"s", prints},
+		{"%", printp},
+		{"b", printbin},
+		{"o", printoct},
+		{"u", printuns},
+		{"x", printhex},
+		{"X", printHEX},
+		{"p", printaddr},
+		{"S", printS},
+		{"r", printrev},
+		{"R", printrot13},
 		{NULL, NULL}
 	};
 	int i = 0;

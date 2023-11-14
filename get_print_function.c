@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * get_print_func - finds the format func
+ * getprint_func - finds the format func
  * @s: the format string
  * @ap: argument pointer
  * @params: the parameters struct
  *
  * Return: the number of bytes printed
  */
-int get_print_func(char *s, va_list ap, params_t *params)
+int getprint_func(char *s, va_list ap, params_t *params)
 {
-	int (*f)(va_list, params_t *) = get_specifier(s);
+	int (*f)(va_list, params_t *) = getspec(s);
 
 	if (f)
 		return (f(ap, params));

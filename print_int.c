@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_int - prints integer
+ * printi - prints integer
  * @ap: argument pointer
  * @params: the parameters struct
  *
  * Return: number chars printed
  */
-int print_int(va_list ap, params_t *params)
+int printi(va_list ap, params_t *params)
 {
 	long l;
 
@@ -17,5 +17,5 @@ int print_int(va_list ap, params_t *params)
 		l = (short int)va_arg(ap, int);
 	else
 		l = (int)va_arg(ap, int);
-	return (print_number(convert(l, 10, 0, params), params));
+	return (printnum(conv(l, 10, 0, params), params));
 }

@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_rot13 - prints string in rot13
+ * printrot13 - prints string in rot13
  * @ap: string
  * @params: the parameters struct
  *
  * Return: number bytes printed
  */
-int print_rot13(va_list ap, params_t *params)
+int printrot13(va_list ap, params_t *params)
 {
 	int i, index;
 	int count = 0;

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * convert - converter function, a clone of itoa
+ * conv - conver function, a clone of itoa
  * @num: number
  * @base: base
  * @flags: argument flags
@@ -9,7 +9,7 @@
  *
  * Return: string
  */
-char *convert(long int num, int base, int flags, params_t *params)
+char *conv(long int num, int base, int flags, params_t *params)
 {
 	static char *array;
 	static char buffer[50];
@@ -18,13 +18,13 @@ char *convert(long int num, int base, int flags, params_t *params)
 	unsigned long n = num;
 	(void)params;
 
-	if (!(flags & CONVERT_UNSIGNED) && num < 0)
+	if (!(flags & CONV_UNSIGNED) && num < 0)
 	{
 		n = -num;
 		sign = '-';
 
 	}
-	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
+	array = flags & CONV_LOWCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
 

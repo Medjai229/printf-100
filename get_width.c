@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * get_width - gets the width from the format string
+ * getwidth - gets the width from the format string
  * @s: the format string
  * @params: the parameters struct
  * @ap: the argument pointer
  *
  * Return: new pointer
  */
-char *get_width(char *s, params_t *params, va_list ap)
+char *getwidth(char *s, params_t *params, va_list ap)
 {
 	int d = 0;
 

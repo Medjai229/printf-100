@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_rev - prints string in reverse
+ * printrev - prints string in reverse
  * @ap: string
  * @params: the parameters struct
  *
  * Return: number bytes printed
  */
-int print_rev(va_list ap, params_t *params)
+int printrev(va_list ap, params_t *params)
 {
 	int len, sum = 0;
 	char *str = va_arg(ap, char *);

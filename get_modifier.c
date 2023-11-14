@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * get_modifier - finds the modifier func
+ * getmod - finds the modifier func
  * @s: the format string
  * @params: the parameters struct
  *
  * Return: if modifier was valid
  */
-int get_modifier(char *s, params_t *params)
+int getmod(char *s, params_t *params)
 {
 	int i = 0;
 
